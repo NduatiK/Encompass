@@ -1,0 +1,23 @@
+PODS:
+  - Compass (6.0.0)
+  - Encompass (0.1.0):
+    - Compass (= 6.0.0)
+
+DEPENDENCIES:
+  - Encompass (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Compass
+
+EXTERNAL SOURCES:
+  Encompass:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Compass: ff30e2056c549ea5cb5b8a307d28ef628e4209ff
+  Encompass: ca8b714a52a77b1f006f8dad859822b51cce80bc
+
+PODFILE CHECKSUM: 0cb2eba73d65cdf0bdba2b71abbf19c4b430ce51
+
+COCOAPODS: 1.5.3
