@@ -32,11 +32,15 @@ extension Navigator {
         for routerName in registeredRouters {
             let urn = routerName + registeredUrn
             if registeredRoutes[urn] != nil {
-                var location = Location(path: urn, payload: nil)
+                let location = Location(path: urn, payload: nil)
                 Navigator.handle?(location)
                 return true
             }
         }
         return false
+    }
+
+    public static func navigate(registeredUrl url: URL) -> Bool {
+        return navigate(registeredUrn: url.absoluteString)
     }
 }
