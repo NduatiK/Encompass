@@ -27,7 +27,10 @@ extension Navigator {
             return
         }
     }
+}
 
+// MARK: URL Routing
+extension Navigator {
     public static func navigate(registeredUrn: String) -> Bool {
         for routerName in registeredRouters {
             let urn = routerName + registeredUrn

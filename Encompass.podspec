@@ -18,7 +18,7 @@ A wrapper for hypersolo's navigation library – Compass (https://github.com/hyp
 
   s.homepage         = 'https://github.com/NduatiK/Encompass'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'NduatiK' => '012nkuria@gmail.com' }
+  s.author           = { 'NduatiK' => '' }
   s.source           = { :git => 'https://github.com/NduatiK/Encompass.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.source_files = 'Encompass/Classes/**/*'
