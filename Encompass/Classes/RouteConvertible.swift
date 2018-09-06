@@ -11,7 +11,6 @@ import Compass
 public protocol RouteConvertible {
     static var All: [Self] { get }
     var routeHandler: RouteHandler { get }
-    static var Router: Encompasser<Self> { get }
 }
 
 extension RouteConvertible {

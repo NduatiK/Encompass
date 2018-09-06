@@ -23,6 +23,10 @@ public final class Encompasser<R: RouteConvertible> {
         return Array(pathToRoutableMap.keys)
     }
 
+    public func containsRoute(_ location: Location) -> Bool {
+        return paths.contains(location.path)
+    }
+
     public init() {
         pathToRoutableMap = R.All.reduce(into: [String: Routable](), { (map, routeConvertible) in
             let uniquePath = String(describing: self) + routeConvertible.route.path
