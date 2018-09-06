@@ -23,7 +23,7 @@ public final class Encompasser<R: RouteConvertible> {
         return Array(pathToRoutableMap.keys)
     }
 
-    public func containsRoute(_ location: Location) -> Bool {
+    public func canRoute(_ location: Location) -> Bool {
         return paths.contains(location.path)
     }
 
