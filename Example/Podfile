@@ -2,6 +2,7 @@ use_frameworks!
 
 target 'Encompass_Example' do
   pod 'Encompass', :path => '../'
+  pod 'Reusable'
 
   target 'Encompass_Tests' do
     inherit! :search_paths

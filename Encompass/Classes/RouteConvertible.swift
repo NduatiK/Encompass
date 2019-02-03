@@ -34,6 +34,8 @@ extension RouteConvertible {
         if let enumLabel = Mirror.init(reflecting: self).children.first {
             let associatedValues = Mirror.init(reflecting: enumLabel.value)
             associatedValues.children.forEach({ associatedValue in
+                print(associatedValue.label, associatedValue.value)
+
                 if let label = associatedValue.label {
                     payload[label] =  associatedValue.value
                 }
