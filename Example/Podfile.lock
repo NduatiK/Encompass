@@ -1,14 +1,21 @@
 PODS:
   - Compass (6.0.0)
-  - Encompass (0.1.0):
+  - Encompass (0.2.0):
     - Compass (= 6.0.0)
+  - Reusable (4.0.2):
+    - Reusable/Storyboard (= 4.0.2)
+    - Reusable/View (= 4.0.2)
+  - Reusable/Storyboard (4.0.2)
+  - Reusable/View (4.0.2)
 
 DEPENDENCIES:
   - Encompass (from `../`)
+  - Reusable
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Compass
+    - Reusable
 
 EXTERNAL SOURCES:
   Encompass:
@@ -16,8 +23,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Compass: ff30e2056c549ea5cb5b8a307d28ef628e4209ff
-  Encompass: ca8b714a52a77b1f006f8dad859822b51cce80bc
+  Encompass: b1152790928b5f602d512dcdec26b110f18daea9
+  Reusable: 584a5629747c52e0f6a77841b400dc2643f6fa0f
 
-PODFILE CHECKSUM: 0cb2eba73d65cdf0bdba2b71abbf19c4b430ce51
+PODFILE CHECKSUM: 5a7039db7f585c27a6e5e290f8b4ec53a8a46360
 
 COCOAPODS: 1.5.3
