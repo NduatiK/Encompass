@@ -24,7 +24,7 @@ class ViewController: UIViewController, StoryboardSceneBased {
     }
     @IBAction func pushWithString(_ sender: Any) {
         let text = textField.text ?? ""
-        AppRouter.navigate(to: .pushVC((value: text)))
+        AppRouter.navigate(to: .pushVC(value: text))
     }
     @IBAction func present(_ sender: Any) {
         AppRouter.navigate(to: .present)
@@ -32,7 +32,7 @@ class ViewController: UIViewController, StoryboardSceneBased {
     }
     @IBAction func presentWithString(_ sender: Any) {
         let text = textField.text ?? ""
-        AppRouter.navigate(to: .presentVC((value: text, val: "tokyo")))
+        AppRouter.navigate(to: .presentVC(value: text, val: "tokyo"))
     }
 }
 
