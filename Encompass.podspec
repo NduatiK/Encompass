@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Encompass'
-  s.version          = '0.2.1'
+  s.version          = '0.2.3'
   s.summary          = 'Navigation Library'
 
 
@@ -24,5 +24,5 @@ A wrapper for hypersolo's navigation library – Compass (https://github.com/hyp
   s.source_files = 'Encompass/Classes/**/*'
     s.dependency 'Compass', '6.0.0'
 
-swift_version = '4.0'
+swift_version = '4.1'
 end
