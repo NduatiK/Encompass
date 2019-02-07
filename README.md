@@ -4,7 +4,7 @@ A wrapper for hypersolo's navigation library – Compass [hyperoslo/Compass](htt
 
 
 ---
-#Installation
+# Installation
 ```ruby
 pod 'Encompass', :git => 'https://github.com/NduatiK/Encompass.git'
 ```
