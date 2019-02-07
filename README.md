@@ -23,7 +23,7 @@ When I started out with iOS, Storyboards were everything. IBActions were intuiti
 
 It became obvious that segues were chains that strongly coupled my code. Each view controller would have to know the name/type of its neighbours. One change here would break 5 things there...
 
-That's when I came across Compass - hypersolo's central navigation library that promised that my "controllers [would] become agnostic and views stay stupid." So I dove in and it was glorius. 
+That's when I came across Compass - hypersolo's central navigation library that promised that my "controllers [would] become agnostic and views stay stupid." So I dove in and it was glorious. 
 
 All that was needed was to declare the routes and their paths	:
 
@@ -209,9 +209,9 @@ func showPuppy(puppy: Puppy) {
 
 Todos
 ---
-🔲 Unwrap payload arguments automatically - perhaps into a named tuple
-🔲 Add deeplinking support
-🔲 Make puppy demo
+- 🔲 Unwrap payload arguments automatically - perhaps into a named tuple
+- 🔲 Add deeplinking support
+- 🔲 Make puppy demo
 
 
 Author
