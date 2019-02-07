@@ -133,10 +133,10 @@ enum SampleRoutes: RouteConvertible {
 
     static var All: [SampleRoutes] {
         return [
-            notifications,
-            settings,
-            puppyDetails(for: Puppy()),
-            changePuppyName(oldName: "")
+            .notifications,
+            .settings,
+            .puppyDetails(for: Puppy()),
+            .changePuppyName(oldName: "")
        ]
     }
  
