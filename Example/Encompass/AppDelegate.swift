@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func setupEncompass() {
-         Navigator.scheme = "app.Name" // should match deep link url scheme if you want to support deep linking
+         Navigator.scheme = "encompass" // should match deep link url scheme if you want to support deep linking
 
         // Register routes you'd like to support
         Navigator.registerRouter(AppRouter)
@@ -48,6 +48,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Navigate
             Navigator.navigate(to: location, from: currentController)
         }
+    }
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return Navigator.navigate(registeredUrl: url)
     }
 }
 

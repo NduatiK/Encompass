@@ -9,14 +9,10 @@ import UIKit
 import Compass
 
 public final class Encompasser<R: RouteConvertible> {
-    var _pathToRoutableMap = [String: Routable]()
+    private(set) var pathToRoutableMap = [String: Routable]()
 
-     private(set) var pathToRoutableMap: [String: Routable] {
-        get {
-            return _pathToRoutableMap
-        } set {
-            _pathToRoutableMap = newValue
-        }
+    var name: String {
+        return String(describing: self).replacingOccurrences(of: "<", with: ".").replacingOccurrences(of: ">", with: "").replacingOccurrences(of: ".", with: "")
     }
 
     var paths: [String] {
@@ -29,14 +25,14 @@ public final class Encompasser<R: RouteConvertible> {
 
     public init() {
         pathToRoutableMap = R.All.reduce(into: [String: Routable](), { (map, routeConvertible) in
-            let uniquePath = String(describing: self) + routeConvertible.route.path
+            let uniquePath = name + routeConvertible.route.path
             map[uniquePath] = routeConvertible.routeHandler
         })
     }
 
     public func navigate(to routeConvertible: R) {
         let route = routeConvertible.route
-        try! Navigator.navigate(location: Location(path: String(describing: self) + route.path,
+        try! Navigator.navigate(location: Location(path: name + route.path,
                                                    payload: route.payload))
     }
 }

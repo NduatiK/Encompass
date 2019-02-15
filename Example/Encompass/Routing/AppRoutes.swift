@@ -21,9 +21,9 @@ extension Routes {
         // currently the only flaw, case iteratable has to be implemented manaully if one wishes to pass values
         static var All: [Routes.AppRoutes] {
             return [.present,
-                    .presentVC(value: "fdsfds", val: "kkl"),
+                    .presentVC(value: ""),
                     .push,
-                    .pushVC(value: "sdfsd")]
+                    .pushVC(value: "")]
         }
 
         case present
@@ -31,7 +31,7 @@ extension Routes {
         // Path uniqueness is implemented by the enum ie no enum overloading (cant have to entries with the enum name present)
 //       case present(value: String)
 
-        case presentVC(value: String, val: String)
+        case presentVC(value: String)
 
 
         case push

@@ -17,7 +17,7 @@ extension Navigator {
         for path in router.paths {
             registeredRoutes[path] = router.pathToRoutableMap[path]
         }
-        registeredRouters.append(String(describing: router))
+        registeredRouters.append(router.name)
         Navigator.routes.append(contentsOf: router.paths)
     }
 
@@ -31,19 +31,31 @@ extension Navigator {
 
 // MARK: URL Routing
 extension Navigator {
-    public static func navigate(registeredUrn: String) -> Bool {
-        for routerName in registeredRouters {
-            let urn = routerName + registeredUrn
-            if registeredRoutes[urn] != nil {
-                let location = Location(path: urn, payload: nil)
-                Navigator.handle?(location)
-                return true
-            }
-        }
-        return false
+    static func pathNameFrom(_ url: URL) -> Substring? {
+        let deprefixedUrn = url.absoluteString
+            .replacingOccurrences(of: Navigator.scheme, with: "")
+        let urlSections = deprefixedUrn.split(separator: Character("?"))
+        return urlSections.first
     }
 
     public static func navigate(registeredUrl url: URL) -> Bool {
-        return navigate(registeredUrn: url.absoluteString)
+        guard let pathNameSubString = pathNameFrom(url) else {
+            return false
+        }
+
+        for routerName in registeredRouters {
+
+            let routeName = routerName + String(pathNameSubString)
+            if registeredRoutes[routeName] != nil {
+                let internalRouteUrn = Navigator.scheme + routerName + url.absoluteString.replacingOccurrences(of: Navigator.scheme, with: "")
+                let aUrl = URL(string: internalRouteUrn) ?? url
+
+                if let location = Navigator.parse(url: aUrl)  {
+                    Navigator.handle?(Location(path: routeName, payload: location.arguments))
+                    return true
+                }
+            }
+        }
+        return false
     }
 }

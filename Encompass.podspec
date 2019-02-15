@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Encompass'
-  s.version          = '0.2.3'
+  s.version          = '0.2.5'
   s.summary          = 'Navigation Library'
 
 
