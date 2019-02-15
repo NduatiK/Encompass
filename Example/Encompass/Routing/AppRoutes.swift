@@ -55,7 +55,7 @@ extension Routes {
                 return RouteHandler { (payload, currentController) in
                     guard let string = payload["value"] as? String else { return }
                     let vc = ViewController2.instantiate()
-                    vc.string = string
+                    vc.passedValue = string
                     currentController.present(vc, animated: true, completion: nil)
 
                 }
@@ -63,7 +63,7 @@ extension Routes {
                 return RouteHandler { (payload, currentController) in
                     guard let string = payload["value"] as? String else { return }
                     let vc = ViewController2.instantiate()
-                    vc.string = string
+                    vc.passedValue = string
                     currentController.navigationController?.pushViewController(vc, animated: true)
                 }
             }
