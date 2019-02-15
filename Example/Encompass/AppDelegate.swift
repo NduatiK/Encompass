@@ -23,6 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupEncompass() {
          Navigator.scheme = "encompass" // should match deep link url scheme if you want to support deep linking
 
+        /*
+         Test out deeplinking by adding the following links to the notes app and tapping the links
+
+         encompass://present
+         encompass://presentVC?value=3
+
+        */
+
         // Register routes you'd like to support
         Navigator.registerRouter(AppRouter)
         Navigator.registerRouter(ErrorRouter)
