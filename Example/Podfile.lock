@@ -1,6 +1,6 @@
 PODS:
   - Compass (6.0.0)
-  - Encompass (0.2.0):
+  - Encompass (0.2.5):
     - Compass (= 6.0.0)
   - Reusable (4.0.2):
     - Reusable/Storyboard (= 4.0.2)
@@ -23,7 +23,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Compass: ff30e2056c549ea5cb5b8a307d28ef628e4209ff
-  Encompass: b1152790928b5f602d512dcdec26b110f18daea9
+  Encompass: 6d1c90d8c2ec58c86957c0cefed6efc54970791f
   Reusable: 584a5629747c52e0f6a77841b400dc2643f6fa0f
 
 PODFILE CHECKSUM: 5a7039db7f585c27a6e5e290f8b4ec53a8a46360

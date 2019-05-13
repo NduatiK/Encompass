@@ -17,6 +17,6 @@ public struct RouteHandler: Routable {
     }
 
     public func navigate(to location: Location, from currentController: CurrentController) throws {
-        self.callback(location.payload as? [String: Any] ?? [String: Any](), currentController)
+        self.callback(location.payload as? [String: Any] ?? location.arguments, currentController)
     }
 }

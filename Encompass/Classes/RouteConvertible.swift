@@ -26,7 +26,7 @@ extension RouteConvertible {
         return self.routeBuilder()
     }
 
-    // Creates a route that automatically injects the enum name as the route name
+    // Creates a route from the enum name and payload
     func routeBuilder() -> Route {
 
         var payload = [String: Any]()
@@ -34,8 +34,6 @@ extension RouteConvertible {
         if let enumLabel = Mirror.init(reflecting: self).children.first {
             let associatedValues = Mirror.init(reflecting: enumLabel.value)
             associatedValues.children.forEach({ associatedValue in
-                print(associatedValue.label, associatedValue.value)
-
                 if let label = associatedValue.label {
                     payload[label] =  associatedValue.value
                 }

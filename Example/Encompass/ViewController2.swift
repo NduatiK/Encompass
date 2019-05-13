@@ -14,11 +14,13 @@ class ViewController2: UIViewController, StoryboardSceneBased {
         return UIStoryboard(name: "Main", bundle: nil)
     }
 
-    var string = "Value"
+    var passedValue: String?
     @IBOutlet weak var valueLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        valueLabel.text = string
+        if let string = passedValue {
+            valueLabel.text = "Passed in \"\(string)\""
+        }
     }
     @IBAction func dismissTouched(_ sender: Any) {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
